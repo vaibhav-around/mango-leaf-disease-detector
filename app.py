@@ -12,7 +12,7 @@ def load_verifier_model():
 
 @st.cache_resource
 def load_disease_model():
-    return tf.keras.models.load_model("mango_leaf_disease_model.keras")
+    return tf.keras.models.load_model("mango_leaf_disease_model_v2.keras")
 
 
 verifier_model = load_verifier_model()
@@ -33,6 +33,7 @@ class_names = [
     "Healthy",
     "Powdery Mildew",
     "Sooty Mould",
+    "Unknown"
 ]
 
 st.set_page_config(page_title="Mango Leaf Disease Detection", page_icon="🍃")
